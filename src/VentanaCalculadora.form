@@ -28,12 +28,20 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="pantalla" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
+                      <Component id="boton7" min="-2" pref="65" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="boton8" min="-2" pref="65" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="boton9" min="-2" pref="65" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="botonsuma" min="-2" pref="65" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Component id="boton4" min="-2" pref="65" max="-2" attributes="0"/>
                                   <Component id="boton1" min="-2" pref="65" max="-2" attributes="0"/>
-                                  <Component id="boton7" min="-2" pref="65" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -47,11 +55,6 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="boton6" min="-2" pref="65" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="boton8" min="-2" pref="65" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="boton9" min="-2" pref="65" max="-2" attributes="0"/>
-                                  </Group>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -62,12 +65,11 @@
                               <Component id="botonigual" min="-2" pref="65" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="92" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="botonmultiplica" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
-                          <Component id="botonresta" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
-                          <Component id="botonsuma" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
                           <Component id="botondivide" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                          <Component id="botonresta" alignment="1" min="-2" pref="65" max="-2" attributes="0"/>
+                          <Component id="botonmultiplica" alignment="1" min="-2" pref="65" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -79,45 +81,36 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="pantalla" min="-2" pref="51" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="boton7" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
-                          <Component id="boton8" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
-                          <Component id="boton9" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="boton4" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
-                          <Component id="boton5" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
-                          <Component id="boton6" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="boton2" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
-                          <Component id="boton3" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
-                          <Component id="boton1" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="boton0" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
-                          <Component id="botonigual" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
-                          <Component id="botonnada" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="botonsuma" min="-2" pref="65" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="botonresta" min="-2" pref="65" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="botonmultiplica" min="-2" pref="65" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="botondivide" min="-2" pref="65" max="-2" attributes="0"/>
-                  </Group>
+              <Component id="pantalla" min="-2" pref="90" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="boton7" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                  <Component id="boton8" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                  <Component id="boton9" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                  <Component id="botonsuma" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="55" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="boton4" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                  <Component id="boton5" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                  <Component id="boton6" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                  <Component id="botonresta" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="boton2" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                  <Component id="boton3" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                  <Component id="boton1" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                  <Component id="botonmultiplica" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="boton0" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                  <Component id="botonigual" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                  <Component id="botonnada" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                  <Component id="botondivide" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -245,6 +238,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="="/>
       </Properties>
+      <Events>
+        <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botonigualMousePressed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="boton0">
       <Properties>
@@ -271,6 +267,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="*"/>
       </Properties>
+      <Events>
+        <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botonmultiplicaMousePressed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="botonresta">
       <Properties>
@@ -279,6 +278,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="-"/>
       </Properties>
+      <Events>
+        <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botonrestaMousePressed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="botonsuma">
       <Properties>
@@ -287,6 +289,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="+"/>
       </Properties>
+      <Events>
+        <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botonsumaMousePressed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="botondivide">
       <Properties>
@@ -295,6 +300,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="/"/>
       </Properties>
+      <Events>
+        <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botondivideMousePressed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
