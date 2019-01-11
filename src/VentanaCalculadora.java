@@ -315,7 +315,9 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_boton0MousePressed
 
     private void operacionPulsada(String opera) {
-        operando1 = Double.valueOf(pantalla.getText());
+        //Convierto lo que hay escrito en la pantalla (que es un número pero que ahora
+        //mismo es un string) a su equivalente double, para poder operar con é.
+        operando1 = Double.valueOf(pantalla.getText()); 
         pantalla.setText("0");
         operacion = opera;
     }
@@ -325,7 +327,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_botonsumaMousePressed
 
     private void botonigualMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonigualMousePressed
-        
+        //Leo el segundo operando que está en la pantalla y lo convierto a double
         double operando2 = Double.valueOf(pantalla.getText());
         
         if (operacion.equals("+")){
@@ -338,15 +340,12 @@ public class VentanaCalculadora extends javax.swing.JFrame {
             operando1 = operando1 * operando2;
         }
         if (operacion.equals("/")){
-            
-            
-                operando1 = operando1 / operando2;
-            
+            operando1 = operando1 / operando2; 
         }
          if (operacion.equals("")){
             operando1 = 0; 
         }
-        
+        //dibujo en la pantalla el resultado convertido a string
         pantalla.setText(String.valueOf(operando1));
     }//GEN-LAST:event_botonigualMousePressed
 
