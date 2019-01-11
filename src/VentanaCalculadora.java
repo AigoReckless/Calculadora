@@ -41,7 +41,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         boton9 = new javax.swing.JButton();
         botonigual = new javax.swing.JButton();
         boton0 = new javax.swing.JButton();
-        botonnada = new javax.swing.JButton();
+        botonlimpia = new javax.swing.JButton();
         botonmultiplica = new javax.swing.JButton();
         botonresta = new javax.swing.JButton();
         botonsuma = new javax.swing.JButton();
@@ -144,7 +144,13 @@ public class VentanaCalculadora extends javax.swing.JFrame {
             }
         });
 
-        botonnada.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        botonlimpia.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        botonlimpia.setText("C");
+        botonlimpia.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                botonlimpiaMousePressed(evt);
+            }
+        });
 
         botonmultiplica.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         botonmultiplica.setText("*");
@@ -211,7 +217,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(boton6, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(botonnada, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(botonlimpia, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(boton0, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -250,7 +256,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(boton0, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botonigual, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonnada, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonlimpia, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botondivide, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23))
         );
@@ -333,8 +339,12 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         }
         if (operacion.equals("/")){
             
-            operando1 = operando1 / operando2;
             
+                operando1 = operando1 / operando2;
+            
+        }
+         if (operacion.equals("")){
+            operando1 = 0; 
         }
         
         pantalla.setText(String.valueOf(operando1));
@@ -351,6 +361,10 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     private void botondivideMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botondivideMousePressed
         operacionPulsada("/");
     }//GEN-LAST:event_botondivideMousePressed
+
+    private void botonlimpiaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonlimpiaMousePressed
+        operacionPulsada("");
+    }//GEN-LAST:event_botonlimpiaMousePressed
 
     /**
      * @param args the command line arguments
@@ -400,8 +414,8 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     private javax.swing.JButton boton9;
     private javax.swing.JButton botondivide;
     private javax.swing.JButton botonigual;
+    private javax.swing.JButton botonlimpia;
     private javax.swing.JButton botonmultiplica;
-    private javax.swing.JButton botonnada;
     private javax.swing.JButton botonresta;
     private javax.swing.JButton botonsuma;
     private javax.swing.JLabel pantalla;
