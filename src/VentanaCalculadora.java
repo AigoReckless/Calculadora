@@ -332,12 +332,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         operando1 = Double.valueOf(pantalla1.getText()); 
         pantalla1.setText("0");
         operacion = opera; 
-        //Arreglar botón clear
-        if (operacion.equals("c")){
-            operando1 = 0;
-            pantalla.setText("0");
-            pantalla1.setText("0");
-        }
+   
     }
     
     private void botonsumaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonsumaMousePressed
@@ -393,7 +388,8 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_botondivideMousePressed
 
     private void botonlimpiaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonlimpiaMousePressed
-        operacionPulsada("c");
+        pantalla.setText("0");
+        pantalla1.setText("0");
     }//GEN-LAST:event_botonlimpiaMousePressed
 
     /**
