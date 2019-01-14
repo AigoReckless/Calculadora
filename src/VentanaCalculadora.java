@@ -331,7 +331,8 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         //mismo es un string) a su equivalente double, para poder operar con é.
         operando1 = Double.valueOf(pantalla1.getText()); 
         pantalla1.setText("0");
-        operacion = opera;
+        operacion = opera; 
+        //Arreglar botón clear
         if (operacion.equals("c")){
             operando1 = 0;
             pantalla.setText("0");
@@ -347,30 +348,31 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     private void botonigualMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonigualMousePressed
         //Leo el segundo operando que está en la pantalla y lo convierto a double
         double operando2 = Double.valueOf(pantalla1.getText());
-        
+        double operando3 = Double.valueOf(pantalla1.getText());
         if (operacion.equals("+")){
-            operando1 = operando1 + operando2;
-            pantalla.setText(String.valueOf(operando1));
-            pantalla1.setText("0");
+            operando3 = operando1 + operando2;
+            pantalla.setText(String.valueOf(operando3));
+            pantalla1.setText(operando1 + operacion + operando2);
         }
         if (operacion.equals("-")){
-            operando1 = operando1 - operando2;
-            pantalla.setText(String.valueOf(operando1));
-            pantalla1.setText("0");
+            operando3 = operando1 - operando2;
+            pantalla.setText(String.valueOf(operando3));
+            pantalla1.setText(operando1 + operacion + operando2);
         }
         if (operacion.equals("*")){
-            operando1 = operando1 * operando2;
-            pantalla.setText(String.valueOf(operando1));
-            pantalla1.setText("0");
+            operando3 = operando1 * operando2;
+            pantalla.setText(String.valueOf(operando3));
+            pantalla1.setText(operando1 + operacion + operando2);
         }
         if (operacion.equals("/")){
             if (operando2 != 0) {
-                operando1 = operando1 / operando2; 
-                pantalla.setText(String.valueOf(operando1));
-                pantalla1.setText("0");
+                operando3 = operando1 / operando2; 
+                pantalla.setText(String.valueOf(operando3));
+                pantalla1.setText(operando1 + operacion + operando2);
             }  
             else{
                 pantalla.setText("Error");
+                pantalla1.setText(operando1 + operacion + operando2);
             }
         }
         
