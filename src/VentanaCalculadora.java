@@ -46,6 +46,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         botonresta = new javax.swing.JButton();
         botonsuma = new javax.swing.JButton();
         botondivide = new javax.swing.JButton();
+        pantalla1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -184,6 +185,13 @@ public class VentanaCalculadora extends javax.swing.JFrame {
             }
         });
 
+        pantalla1.setBackground(new java.awt.Color(0, 0, 0));
+        pantalla1.setFont(new java.awt.Font("Lucida Fax", 0, 36)); // NOI18N
+        pantalla1.setForeground(new java.awt.Color(51, 255, 0));
+        pantalla1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        pantalla1.setText("0");
+        pantalla1.setOpaque(true);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -226,14 +234,17 @@ public class VentanaCalculadora extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(botondivide, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(botonresta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(botonmultiplica, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(botonmultiplica, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(pantalla1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(pantalla, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pantalla1)
+                .addGap(4, 4, 4)
+                .addComponent(pantalla)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(boton7, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -265,12 +276,13 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonPulsado(String numeroPulsado){
-        String numeroEnPantalla = pantalla.getText();
+        String numeroEnPantalla = pantalla1.getText();
+        
         if (numeroEnPantalla == "0"){
-            pantalla.setText(numeroPulsado);
+            pantalla1.setText(numeroPulsado);
         }
         else{
-            pantalla.setText(numeroEnPantalla + numeroPulsado);
+            pantalla1.setText(numeroEnPantalla + numeroPulsado);
         }
     }
     
@@ -317,18 +329,19 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     private void operacionPulsada(String opera) {
         //Convierto lo que hay escrito en la pantalla (que es un número pero que ahora
         //mismo es un string) a su equivalente double, para poder operar con é.
-        operando1 = Double.valueOf(pantalla.getText()); 
-        pantalla.setText("0");
+        operando1 = Double.valueOf(pantalla1.getText()); 
+        pantalla1.setText("0");
         operacion = opera;
     }
     
     private void botonsumaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonsumaMousePressed
         operacionPulsada("+");
+        
     }//GEN-LAST:event_botonsumaMousePressed
 
     private void botonigualMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonigualMousePressed
         //Leo el segundo operando que está en la pantalla y lo convierto a double
-        double operando2 = Double.valueOf(pantalla.getText());
+        double operando2 = Double.valueOf(pantalla1.getText());
         
         if (operacion.equals("+")){
             operando1 = operando1 + operando2;
@@ -342,11 +355,12 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         if (operacion.equals("/")){
             operando1 = operando1 / operando2; 
         }
-         if (operacion.equals("")){
+         if (operacion.equals("c")){
             operando1 = 0; 
         }
         //dibujo en la pantalla el resultado convertido a string
         pantalla.setText(String.valueOf(operando1));
+        pantalla1.setText("0");
     }//GEN-LAST:event_botonigualMousePressed
 
     private void botonrestaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonrestaMousePressed
@@ -362,7 +376,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_botondivideMousePressed
 
     private void botonlimpiaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonlimpiaMousePressed
-        operacionPulsada("");
+        operacionPulsada("c");
     }//GEN-LAST:event_botonlimpiaMousePressed
 
     /**
@@ -418,5 +432,6 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     private javax.swing.JButton botonresta;
     private javax.swing.JButton botonsuma;
     private javax.swing.JLabel pantalla;
+    private javax.swing.JLabel pantalla1;
     // End of variables declaration//GEN-END:variables
 }
