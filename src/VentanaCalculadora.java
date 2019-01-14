@@ -332,6 +332,11 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         operando1 = Double.valueOf(pantalla1.getText()); 
         pantalla1.setText("0");
         operacion = opera;
+        if (operacion.equals("c")){
+            operando1 = 0;
+            pantalla.setText(String.valueOf(operando1));
+            pantalla1.setText(String.valueOf(operando1));
+        }
     }
     
     private void botonsumaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonsumaMousePressed
@@ -345,22 +350,32 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         
         if (operacion.equals("+")){
             operando1 = operando1 + operando2;
+            pantalla.setText(String.valueOf(operando1));
+            pantalla1.setText("0");
         }
         if (operacion.equals("-")){
             operando1 = operando1 - operando2;
+            pantalla.setText(String.valueOf(operando1));
+            pantalla1.setText("0");
         }
         if (operacion.equals("*")){
             operando1 = operando1 * operando2;
+            pantalla.setText(String.valueOf(operando1));
+            pantalla1.setText("0");
         }
         if (operacion.equals("/")){
-            operando1 = operando1 / operando2; 
+            if (operando2 != 0) {
+                operando1 = operando1 / operando2; 
+                pantalla.setText(String.valueOf(operando1));
+                pantalla1.setText("0");
+            }  
+            else{
+                pantalla.setText("Error");
+            }
         }
-         if (operacion.equals("c")){
-            operando1 = 0; 
-        }
+        
         //dibujo en la pantalla el resultado convertido a string
-        pantalla.setText(String.valueOf(operando1));
-        pantalla1.setText("0");
+        
     }//GEN-LAST:event_botonigualMousePressed
 
     private void botonrestaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonrestaMousePressed
