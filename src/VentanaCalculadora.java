@@ -334,8 +334,8 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         operacion = opera;
         if (operacion.equals("c")){
             operando1 = 0;
-            pantalla.setText(String.valueOf(operando1));
-            pantalla1.setText(String.valueOf(operando1));
+            pantalla.setText("0");
+            pantalla1.setText("0");
         }
     }
     
